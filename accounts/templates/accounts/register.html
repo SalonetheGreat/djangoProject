@@ -1,0 +1,22 @@
+{% extends 'accounts/base.html' %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block content %}
+    <p>This is the register page.</p>
+    <form method="POST" action="{% url 'accounts:register' %}" style="max-width: 400px">
+        <input placeholder="Email"
+               type="text"
+               class="form-control mb-2"
+               name="email"
+               required>
+        <input placeholder="Password"
+               type="password"
+               class="form-control mb-2"
+               name="password"
+               required>
+        <input class="btn btn-success" type="submit" value="Register">
+    </form>
+{% endblock %}
